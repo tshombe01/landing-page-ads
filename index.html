@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution Révolutionnaire | Talanta Biz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#f59e0b',
+                        accent: '#10b981',
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #2563eb, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 glass bg-white/80 dark:bg-slate-950/80 top-0 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="font-bold text-2xl tracking-tighter">
+                <span class="text-primary">TALANTA</span><span class="text-slate-400">BIZ</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+                <a href="#commander" class="hidden sm:block bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all text-sm">
+                    Commander
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hook Section (Hero) -->
+    <section class="relative pt-32 pb-20 px-4 overflow-hidden min-h-[90vh] flex items-center">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-primary font-bold text-sm mb-6 animate-pulse">
+                🔥 OFFRE LIMITÉE - DERNIER JOUR
+            </span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6">
+                Ne laissez plus le stress gâcher <br>
+                <span class="gradient-text">votre productivité.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto">
+                La méthode prouvée pour reprendre le contrôle de votre temps et doubler vos résultats sans travailler plus dur.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#prix" class="w-full sm:w-auto bg-primary text-white text-lg font-bold px-10 py-5 rounded-2xl shadow-xl shadow-blue-500/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+                    Commander maintenant <i class="fas fa-arrow-right"></i>
+                </a>
+                <p class="text-sm text-slate-500 flex items-center gap-1">
+                    <i class="fas fa-check-circle text-accent"></i> Paiement sécurisé
+                </p>
+            </div>
+            <div class="mt-12 flex justify-center gap-8 grayscale opacity-60 overflow-x-auto no-scrollbar whitespace-nowrap py-4">
+                <span class="font-bold text-xl uppercase">Forbes</span>
+                <span class="font-bold text-xl uppercase">Le Monde</span>
+                <span class="font-bold text-xl uppercase">BFM TV</span>
+                <span class="font-bold text-xl uppercase">Wired</span>
+            </div>
+        </div>
+        <!-- Background elements -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full -z-10"></div>
+    </section>
+
+    <!-- 2. Section Problème -->
+    <section class="py-20 bg-slate-100 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl">
+                        <div class="space-y-6">
+                            <div class="flex gap-4 items-start">
+                                <div class="bg-red-100 dark:bg-red-900/30 p-3 rounded-xl"><i class="fas fa-clock text-red-500"></i></div>
+                                <p class="text-lg">Journées interminables sans voir le bout de votre liste.</p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="bg-red-100 dark:bg-red-900/30 p-3 rounded-xl"><i class="fas fa-brain text-red-500"></i></div>
+                                <p class="text-lg">Sensation constante de brouillard mental et de surcharge.</p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="bg-red-100 dark:bg-red-900/30 p-3 rounded-xl"><i class="fas fa-battery-half text-red-500"></i></div>
+                                <p class="text-lg">Épuisement physique dès le milieu de la semaine.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 italic">Marre de courir après le temps ?</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg mb-6 leading-relaxed">
+                        Chaque jour se ressemble. Vous travaillez dur, mais à la fin de la journée, vous avez l'impression de n'avoir rien accompli de concret. Le stress s'accumule, votre vie personnelle en pâtit et votre ambition s'éteint. 
+                    </p>
+                    <p class="font-semibold text-primary">Ce n'est pas de votre faute, c'est votre système qui est obsolète.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Section Solution -->
+    <section class="py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16">Découvrez le <span class="text-primary underline">Système Talanta</span></h2>
+            <div class="relative max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl group">
+                <div class="aspect-video bg-slate-800 flex items-center justify-center text-white">
+                    <i class="fas fa-play-circle text-7xl opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer"></i>
+                    <!-- Simulating product image/video -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8 text-left">
+                        <p class="text-xl font-bold">Le futur de votre organisation commence ici.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-12 text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                Plus qu'un simple outil, c'est une véritable extension de votre cerveau conçue pour automatiser le superflu et vous concentrer sur l'essentiel.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. Section Bénéfices (6 bénéfices) -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pourquoi choisir Talanta Biz ?</h2>
+                <p class="text-slate-400">Des résultats concrets, visibles dès la première semaine.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benef 1 -->
+                <div class="p-8 rounded-2xl border border-slate-800 hover:border-primary/50 transition-all bg-slate-800/50">
+                    <i class="fas fa-rocket text-primary text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Vitesse d'Exécution</h3>
+                    <p class="text-slate-400">Accomplissez en 4 heures ce qui vous en prenait 8 auparavant.</p>
+                </div>
+                <!-- Benef 2 -->
+                <div class="p-8 rounded-2xl border border-slate-800 hover:border-primary/50 transition-all bg-slate-800/50">
+                    <i class="fas fa-shield-alt text-primary text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Zéro Stress</h3>
+                    <p class="text-slate-400">Dormez sur vos deux oreilles en sachant que tout est sous contrôle.</p>
+                </div>
+                <!-- Benef 3 -->
+                <div class="p-8 rounded-2xl border border-slate-800 hover:border-primary/50 transition-all bg-slate-800/50">
+                    <i class="fas fa-sync text-primary text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Automatisation</h3>
+                    <p class="text-slate-400">Laissez notre technologie s'occuper des tâches répétitives.</p>
+                </div>
+                <!-- Benef 4 -->
+                <div class="p-8 rounded-2xl border border-slate-800 hover:border-primary/50 transition-all bg-slate-800/50">
+                    <i class="fas fa-mobile-alt text-primary text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Accès Partout</h3>
+                    <p class="text-slate-400">Synchronisation parfaite sur tous vos appareils en temps réel.</p>
+                </div>
+                <!-- Benef 5 -->
+                <div class="p-8 rounded-2xl border border-slate-800 hover:border-primary/50 transition-all bg-slate-800/50">
+                    <i class="fas fa-chart-line text-primary text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Analyse IA</h3>
+                    <p class="text-slate-400">Recevez des rapports personnalisés pour optimiser vos performances.</p>
+                </div>
+                <!-- Benef 6 -->
+                <div class="p-8 rounded-2xl border border-slate-800 hover:border-primary/50 transition-all bg-slate-800/50">
+                    <i class="fas fa-users text-primary text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Support 24/7</h3>
+                    <p class="text-slate-400">Une équipe d'experts dédiée à votre réussite à tout moment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 & 6. Section Produit + Urgence + Prix -->
+    <section id="prix" class="py-20">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white dark:bg-slate-900 rounded-[3rem] shadow-2xl overflow-hidden border-4 border-primary/20">
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row gap-12 items-center">
+                        <div class="w-full md:w-1/2">
+                            <div class="relative aspect-square rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                                <i class="fas fa-box-open text-9xl text-slate-300"></i>
+                                <!-- Product Image Placeholder -->
+                                <div class="absolute top-4 right-4 bg-secondary text-white px-4 py-1 rounded-full font-bold animate-bounce-slow">
+                                    -50%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h2 class="text-3xl font-bold mb-4">Pack Premium Talanta</h2>
+                            <ul class="space-y-3 mb-8 text-slate-600 dark:text-slate-400">
+                                <li class="flex gap-2 items-center"><i class="fas fa-check text-accent"></i> Licence à vie</li>
+                                <li class="flex gap-2 items-center"><i class="fas fa-check text-accent"></i> 3 Bonus exclusifs offerts</li>
+                                <li class="flex gap-2 items-center"><i class="fas fa-check text-accent"></i> Accès à la communauté VIP</li>
+                            </ul>
+                            
+                            <!-- Urgency -->
+                            <div class="bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-800 p-4 rounded-xl mb-8">
+                                <p class="text-orange-600 dark:text-orange-400 font-bold text-sm flex items-center gap-2">
+                                    <i class="fas fa-stopwatch"></i> L'OFFRE EXPIRE DANS :
+                                </p>
+                                <div class="flex gap-4 mt-2 text-2xl font-mono font-bold text-orange-700 dark:text-orange-300">
+                                    <div>01<span class="text-xs ml-1 font-sans">H</span></div>
+                                    <div>42<span class="text-xs ml-1 font-sans">M</span></div>
+                                    <div>15<span class="text-xs ml-1 font-sans">S</span></div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-end gap-4 mb-8">
+                                <span class="text-4xl md:text-5xl font-extrabold text-primary">49€</span>
+                                <span class="text-xl text-slate-400 line-through">99€</span>
+                            </div>
+
+                            <button class="w-full bg-primary text-white text-xl font-bold py-6 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-blue-500/30">
+                                COMMANDER MAINTENANT
+                            </button>
+                            <p class="text-center text-xs mt-4 text-slate-500 italic">
+                                Garantie satisfait ou remboursé de 30 jours
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Témoignages -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">Ils ont transformé leur vie</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-md">
+                    <div class="flex text-secondary mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm italic mb-6">"Incroyable. J'ai gagné au moins 10 heures par semaine."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-200"></div>
+                        <div>
+                            <p class="text-xs font-bold">Marc L.</p>
+                            <p class="text-[10px] text-slate-500">CEO @ StartUp</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-md">
+                    <div class="flex text-secondary mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm italic mb-6">"Le meilleur investissement de l'année pour mon business."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-200"></div>
+                        <div>
+                            <p class="text-xs font-bold">Sophie D.</p>
+                            <p class="text-[10px] text-slate-500">Freelance Design</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-md">
+                    <div class="flex text-secondary mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm italic mb-6">"Enfin une solution intuitive qui ne demande pas des heures de formation."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-200"></div>
+                        <div>
+                            <p class="text-xs font-bold">Julie K.</p>
+                            <p class="text-[10px] text-slate-500">Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-md">
+                    <div class="flex text-secondary mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-sm italic mb-6">"Je ne peux plus m'en passer au quotidien. Un must-have."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-200"></div>
+                        <div>
+                            <p class="text-xs font-bold">Antoine R.</p>
+                            <p class="text-[10px] text-slate-500">Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="py-20">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Des questions ? Nous avons les réponses.</h2>
+            <div class="space-y-4">
+                <details class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 cursor-pointer">
+                    <summary class="list-none font-bold flex justify-between items-center">
+                        Est-ce que c'est difficile à utiliser ?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Non, l'interface a été conçue pour être prise en main en moins de 5 minutes par n'importe qui.</p>
+                </details>
+                <details class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 cursor-pointer">
+                    <summary class="list-none font-bold flex justify-between items-center">
+                        Fonctionne-t-il sur Mac et PC ?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Oui, Talanta Biz est multi-plateforme et accessible via n'importe quel navigateur web.</p>
+                </details>
+                <details class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 cursor-pointer">
+                    <summary class="list-none font-bold flex justify-between items-center">
+                        Y a-t-il un abonnement mensuel ?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Non, avec l'offre actuelle, vous payez une seule fois et profitez d'un accès à vie sans frais cachés.</p>
+                </details>
+                <details class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 cursor-pointer">
+                    <summary class="list-none font-bold flex justify-between items-center">
+                        Puis-je l'utiliser en équipe ?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Tout à fait ! Des fonctionnalités de collaboration avancées sont incluses dans le pack Premium.</p>
+                </details>
+                <details class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 cursor-pointer">
+                    <summary class="list-none font-bold flex justify-between items-center">
+                        Et si je ne suis pas satisfait ?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Nous offrons une garantie de satisfaction totale de 30 jours. Si vous n'êtes pas convaincu, nous vous remboursons sans poser de questions.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Final CTA -->
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto bg-primary rounded-[3rem] p-12 text-center text-white relative overflow-hidden shadow-2xl shadow-blue-500/40">
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Prêt à changer de dimension ?</h2>
+                <p class="text-xl opacity-90 mb-10 max-w-2xl mx-auto">Rejoignez plus de 10 000 professionnels qui ont déjà fait le choix de la performance.</p>
+                <a href="#prix" id="commander" class="inline-block bg-white text-primary text-xl font-bold px-12 py-6 rounded-2xl hover:bg-slate-100 hover:scale-105 transition-all">
+                    COMMENCER MAINTENANT
+                </a>
+            </div>
+            <!-- Background glow -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-6">
+            <div class="font-bold text-xl">
+                <span class="text-primary">TALANTA</span><span class="text-slate-400">BIZ</span>
+            </div>
+            <p class="text-slate-500 text-sm">© 2024 Tous droits réservés. Conditions Générales | Confidentialité</p>
+            <p class="text-slate-400 text-xs">
+                from <a href="https://talantabiz.com" target="_blank" class="hover:text-primary transition-colors font-medium">Talanta Biz</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script for Dark Mode & basic logic -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        // Check for saved preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.theme = 'light';
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                html.classList.add('dark');
+                localStorage.theme = 'dark';
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        });
+
+        // Simple Countdown logic simulation
+        let hours = 1, minutes = 42, seconds = 15;
+        setInterval(() => {
+            if (seconds > 0) seconds--;
+            else {
+                seconds = 59;
+                if (minutes > 0) minutes--;
+                else {
+                    minutes = 59;
+                    if (hours > 0) hours--;
+                }
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
